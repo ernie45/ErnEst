@@ -16,7 +16,7 @@ app.use(express.static("client/build"));
 app.use(routes);
 
 /** Use port 3001 or the environment port */
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
     console.log("App listening on port " + PORT)
