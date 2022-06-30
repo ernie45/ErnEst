@@ -17,9 +17,6 @@ app.use(routes);
 
 /** Use port 3001 or the environment port */
 const PORT = process.env.PORT || 3001;
-app.get('*',(req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
 
 app.listen(PORT, () => {
     console.log("App listening on port " + PORT)
